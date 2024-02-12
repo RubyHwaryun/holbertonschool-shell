@@ -1,3 +1,2 @@
 #!/bin/bash
-find . -name "*.html" -type f -exec sh -c '[[ ! -f "$0" || $(stat -c %Y "$0") -gt $(stat -c %Y "$("$0" | sed "s|/|$")/$1") ]] && cp "$0" "$("$0" | sed "s|/|$")/$1"' {} + 2>/dev/null
-
+cp -v *.html /..
